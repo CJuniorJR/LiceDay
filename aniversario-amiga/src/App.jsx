@@ -51,14 +51,14 @@ De: alguém que tem muita sorte de te conhecer.
           />
         </section>
 
-        <section className="card quiz-section">
+        {/* <section className="card quiz-section">
           <h2 className="section-title">Um mini quiz sobre a gente 🎲</h2>
           <p className="section-text">
             Não é prova, não vale nota. É só uma forma de revisitar alguns sentimentos.
           </p>
           <p className="section-text">No final tem um presente (em forma de palavras).</p>
           <Quiz />
-        </section>
+        </section> */}
 
         <section className="card letter-section" id="carta">
           <h2 className="section-title">Uma carta pra você 💌</h2>
@@ -81,10 +81,10 @@ De: alguém que tem muita sorte de te conhecer.
         </section>
 
         <footer className="footer">
-          <p>
+          {/* <p>
             Feito com 💜 e um pouquinho de
             carinho.
-          </p>
+          </p> */}
           <p className="footer-small">
             💜 Eu te amo desde sempre para sempre 💜
           </p>
