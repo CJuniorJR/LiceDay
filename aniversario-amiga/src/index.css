@@ -1,0 +1,268 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-color: #030712;
+  --card-bg: rgba(15, 23, 42, 0.95);
+  --accent: #e879f9;
+  --accent-soft: rgba(232, 121, 249, 0.2);
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+  --border-subtle: rgba(148, 163, 184, 0.3);
+  --radius-xl: 18px;
+  --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.5);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #020617 0, #020617 40%, #000 100%);
+  color: var(--text-main);
+}
+
+/* Layout principal */
+
+.app-container {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.starfield {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 16px 40px;
+}
+
+@media (min-width: 768px) {
+  .content {
+    padding: 48px 0 56px;
+  }
+}
+
+/* Cards */
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border-subtle);
+  padding: 24px 20px;
+  backdrop-filter: blur(16px);
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .card {
+    padding: 28px 26px;
+    margin-bottom: 24px;
+  }
+}
+
+/* Hero */
+
+.hero {
+  text-align: left;
+}
+
+.hero-greeting {
+  font-size: 0.9rem;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.hero-title {
+  font-size: 2rem;
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.hero-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+
+/* Typewriter */
+
+.typewriter {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: #e5e7eb;
+  min-height: 2.5em;
+}
+
+/* Section comum */
+
+.section-title {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.section-text {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.section-text.small {
+  font-size: 0.85rem;
+}
+
+/* Quiz */
+
+.quiz-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.quiz-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.quiz-label {
+  font-size: 0.9rem;
+  color: #e5e7eb;
+}
+
+.quiz-textarea {
+  background: rgba(15, 23, 42, 0.85);
+  border-radius: 14px;
+  border: 1px solid var(--border-subtle);
+  padding: 10px 12px;
+  color: var(--text-main);
+  font-size: 0.9rem;
+  resize: vertical;
+  min-height: 70px;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease,
+    background 0.15s ease;
+}
+
+.quiz-textarea::placeholder {
+  color: #6b7280;
+}
+
+.quiz-textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent-soft);
+  background: rgba(15, 23, 42, 0.95);
+}
+
+.quiz-button {
+  margin-top: 6px;
+  align-self: flex-start;
+  padding: 9px 18px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #e879f9, #a855f7);
+  color: #0f172a;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
+  box-shadow: 0 10px 25px rgba(147, 51, 234, 0.45);
+}
+
+.quiz-button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.03);
+}
+
+.quiz-button:active {
+  transform: translateY(1px) scale(0.99);
+  box-shadow: 0 4px 14px rgba(147, 51, 234, 0.25);
+}
+
+.quiz-finish-msg {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: var(--accent);
+}
+
+/* Carta */
+
+.letter-details {
+  margin-top: 10px;
+  background: radial-gradient(circle at top left, #1f2937, #020617);
+  border-radius: 16px;
+  padding: 10px 14px;
+  border: 1px dashed rgba(148, 163, 184, 0.7);
+}
+
+.letter-summary {
+  list-style: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--accent);
+}
+
+.letter-summary::marker {
+  display: none;
+}
+
+.letter-summary::after {
+  content: "▼";
+  font-size: 0.72rem;
+  opacity: 0.8;
+}
+
+details[open] .letter-summary::after {
+  content: "▲";
+}
+
+.letter-text {
+  margin-top: 10px;
+  font-size: 0.94rem;
+  line-height: 1.7;
+  color: #e5e7eb;
+  white-space: pre-line;
+}
+
+/* Footer */
+
+.footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 10px;
+  padding-bottom: 12px;
+}
+
+.footer-small {
+  margin-top: 2px;
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.heart {
+  font-family: "Fira Code", "JetBrains Mono", ui-monospace, SFMono-Regular,
+    Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
