@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 import Typewriter from "./components/Typewriter.jsx";
 import Quiz from "./components/Quiz.jsx";
 import StarfieldBackground from "./components/StarfieldBackground.jsx";
@@ -16,6 +16,8 @@ export default function App() {
   // 🔁 Troque essas infos pela de vocês
   const friendName = "Alice";
   const shortSubtitle = "Hoje o mundo ficou oficialmente mais bonito.";
+
+  const [showFooter, setShowFooter] = useState(false);
 
   const letterText = `
 Oi, ${friendName} 💜
@@ -65,7 +67,8 @@ De: alguém que tem muita sorte de te conhecer.
           {/* <p className="section-text small">
             Se você já terminou o quiz, considere isto seu “presente destravado”.
           </p> */}
-          <details className="letter-details">
+          <details className="letter-details"
+            onToggle={(e) => setShowFooter(e.target.open)}>
             <summary className="letter-summary">
               Clique aqui para abrir a carta
             </summary>
@@ -80,15 +83,13 @@ De: alguém que tem muita sorte de te conhecer.
           </details>
         </section>
 
-        <footer className="footer">
-          {/* <p>
-            Feito com 💜 e um pouquinho de
-            carinho.
-          </p> */}
-          <p className="footer-small">
-            💜 Eu te amo desde sempre para sempre 💜
-          </p>
-        </footer>
+        {showFooter && (
+          <footer className="footer">
+            <p className="footer-small">
+              💜 Eu te amo desde sempre para sempre 💜
+            </p>
+          </footer>
+        )}
       </main>
     </div>
   );
