@@ -28,7 +28,7 @@ sem nem perceber.
 Obrigado por ser quem você é, por todas as conversas, por me aguentar do jeito que eu sou
 e por deixar meus dias mais legais.
 
-Feliz aniversário. Você merece o mundo, de verdade.
+Feliz aniversário. Você merece o mundo!!!!!
 
 De: alguém que tem muita sorte de te conhecer.
 `;
@@ -46,7 +46,7 @@ De: alguém que tem muita sorte de te conhecer.
           <p className="hero-subtitle">{shortSubtitle}</p>
 
           <Typewriter
-            text="Antes de tudo: coloca um sorriso no rosto e aproveita esse momento só seu."
+            text="Oi Lice, Feliz aniversarioooooooOoOoOoOoOoOoOoOoOoOoOoOoO eu fiz esse sitezinho pra tentar demonstrar minha adimiração por você (fiz meu melhor)"
             speed={40}
           />
         </section>
