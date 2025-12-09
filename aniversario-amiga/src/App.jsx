@@ -20,22 +20,20 @@ export default function App() {
   const [showFooter, setShowFooter] = useState(false);
 
   const letterText = `
-Oi, ${friendName} 💜 vai tomar no cuuuuuuuuuuuuuuuuuu
+Oi, ${friendName} 💜 Cada linha desse site é um pouquinho de tempo que eu quis gastar pensando em você.
+É simples, mas é sincero 💜 eu torço de verdade para que esse novo ano
+seja leve, cheio de coisas bonitas, pessoas que te respeite e momentos que te façam sorrir
+sem nem perceber.
 
+Obrigado por ser quem você é, por todas as conversas, por me aguentar do jeito que eu sou
+e por deixar meus dias mais legais.
 
+Feliz aniversário. Você merece o mundo!!!!!
+
+De: alguém que tem muita sorte de te conhecer.
 `;
 
-// Cada linha desse site é um pouquinho de tempo que eu quis gastar pensando em você.
-// É simples, mas é sincero 💜 eu torço de verdade para que esse novo ano
-// seja leve, cheio de coisas bonitas, pessoas que te respeite e momentos que te façam sorrir
-// sem nem perceber.
 
-// Obrigado por ser quem você é, por todas as conversas, por me aguentar do jeito que eu sou
-// e por deixar meus dias mais legais.
-
-// Feliz aniversário. Você merece o mundo!!!!!
-
-// De: alguém que tem muita sorte de te conhecer.
 
   return (
     <div className="app-container">
@@ -48,9 +46,8 @@ Oi, ${friendName} 💜 vai tomar no cuuuuuuuuuuuuuuuuuu
           </p>
           <h1 className="hero-title">Feliz aniversário!</h1>
           <p className="hero-subtitle">{shortSubtitle}</p>
-         {/*Feliz aniversarioooooooOoOoOoOoOoOoOoOoOoOoOoOoO eu fiz esse sitezinho pra tentar demonstrar minha adimiração por você (fiz meu melhor) */}
           <Typewriter
-            text="Oi Lice, vai tomar no cu"
+            text="Oi Lice, Feliz aniversarioooooooOoOoOoOoOoOoOoOoOoOoOoOoO eu fiz esse sitezinho pra tentar demonstrar minha adimiração por você (fiz meu melhor)"
             speed={40}
           />
         </section>
@@ -88,7 +85,7 @@ Oi, ${friendName} 💜 vai tomar no cuuuuuuuuuuuuuuuuuu
         {showFooter && (
           <footer className="footer">
             <p className="footer-small">
-              💜 Fodase 💜
+              💜  Eu te amo desde sempre para sempre  💜 by: Claudio Junior
             </p>
           </footer>
         )}
